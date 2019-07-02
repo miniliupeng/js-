@@ -1,1 +1,45 @@
+一、浏览器组成
+  UI界面（浏览器显示内容之外）
+  浏览器引擎（UI界面和渲染引擎的桥梁）
+  渲染引擎（解析HTML和CSS，显示内容）
+  网络模块（处理网络请求）
+  javascript解析器（解析和执行javascript）
+  UI后端（专门处理，复选框、弹窗复杂UI界面）
+  存储器（存储网络中，cookie，数据）
 
+二、JavaScript发展史
+  js起源于Netscape公司的LiveScript语言
+  94年网景公司发布历史上第一个比较成熟的浏览器（Navigator 0.9），但是只能浏览不能交互
+  95年为了解决表单验证与浏览器多次交互问题，网景公司录用布兰登·艾奇，10天开发出livescript
+  Navigator 2.0发布前，改名为JavaScript（蹭java热度）
+  
+三、javascript组成
+  ECMAScript
+  DOM
+  BOM
+  
+四、JavaScript书写格式
+    1.行内样式: 写在标签内部（不推荐）
+    2.内嵌样式(内联样式) : 
+      a、写在一对head标签中（由于浏览器会从上至下的解析网页，所以必须加上window.onload = function(){}，
+    即等到界面上所有的内容都加载完毕再执行{}中的代码）
+      b、可以将JavaScript代码写到body结束标签的前面
+    3.外链样式: 写在一个单独的.js文件中, 再导入进来
+      a、如果是在head标签中导入的, 必须在.js文件中加上window.onload.
+      b、如果是在body结束标签前面导入的, 那么就不用添加window.onload
+      
+    注：如果需要在一对script标签中编写JavaScript代码, 
+    那么就不能同时通过script标签再导入其它的.js文件, 否则书写的JavaScript代码无效
+五、JavaScript常见输出方式
+  1.通过弹窗的形式来输出
+    alert(需要输出的内容);
+    confirm(需要输出的内容);
+    prompt(需要输出的内容);
+      注意点:每一句代码后面都需要添加一个英文分号；
+            不写分号，浏览器自动帮助我们添加了分号, 浏览器自动添加会消耗一定的性能, 并且有可能会添加错误
+  2.通过网页内容区域的形式来输出
+    document.write(需要输出的内容);
+  3.通过开发者工具控制台的形式来输出
+    console.log(需要输出的内容);  // 普通输出
+    console.warn(需要输出的内容); // 警告输出
+    console.error(需要输出的内容); // 错误输出
